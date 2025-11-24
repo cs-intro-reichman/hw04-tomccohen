@@ -196,40 +196,40 @@ public class ArrCharOps {
      *         lexicographically greater than str2.
      *         return -2 if there is an error with the input.
      */
-        public static int compareTo(String str1, String str2) {
-            //str1 = str1.toLowerCase();
-            //str2 = str2.toLowerCase();
-            char[] arr1 = str1.toCharArray();
-            char[] arr2 = str2.toCharArray();
-            int ans = -2;
-            int i = 0; 
+            public static int compareTo(String str1, String str2) {
+                //str1 = str1.toLowerCase();
+                //str2 = str2.toLowerCase();
+                char[] arr1 = str1.toCharArray();
+                char[] arr2 = str2.toCharArray();
+                int ans = -2;
+                int i = 0; 
 
-            while (i < arr1.length && i < arr2.length)
-            {
-                int ch1 = (int) arr1[i];
-                int ch2 = (int) arr2[i]; 
-                
-                if (ch1 == ch2) i++;
-
-                else if (ch1 > ch2)
+                while (i < arr1.length && i < arr2.length)
                 {
-                    ans = 1;
-                    break;
-                }
+                    int ch1 = (int) arr1[i];
+                    int ch2 = (int) arr2[i]; 
                     
-                else if (ch1 < ch2)
-                {
-                    ans = -1;
-                    break;
-                } 
+                    if (ch1 == ch2) i++;
+
+                    else if (ch1 > ch2)
+                    {
+                        ans = 1;
+                        break;
+                    }
+                        
+                    else if (ch1 < ch2)
+                    {
+                        ans = -1;
+                        break;
+                    } 
+                }
+
+                if (arr1.length < arr2.length) ans = -1;
+
+                else if (arr1.length > arr2.length) ans = 1;
+
+                else ans = 0;
+
+                return ans;
             }
-
-            if (arr1.length < arr2.length) ans = -1;
-
-            else if (arr1.length > arr2.length) ans = 1;
-
-            else ans = 0;
-
-            return ans;
-        }
 }
