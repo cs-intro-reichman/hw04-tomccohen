@@ -4,7 +4,7 @@ public class Primes {
         boolean[] primeNumbers = isPrime(n);
         System.out.println("Prime numbers up to " + n + ":");
         int count = 0;
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i <= n; i++)
         {
             if (primeNumbers[i])
                 {
