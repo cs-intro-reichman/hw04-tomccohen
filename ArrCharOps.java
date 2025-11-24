@@ -197,8 +197,8 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
             public static int compareTo(String str1, String str2) {
-                //str1 = str1.toLowerCase();
-                //str2 = str2.toLowerCase();
+                str1 = str1.toLowerCase();
+                str2 = str2.toLowerCase();
                 char[] arr1 = str1.toCharArray();
                 char[] arr2 = str2.toCharArray();
                 int ans = -2;
@@ -213,14 +213,12 @@ public class ArrCharOps {
 
                     else if (ch1 > ch2)
                     {
-                        ans = 1;
-                        break;
+                        return 1;
                     }
                         
                     else if (ch1 < ch2)
                     {
-                        ans = -1;
-                        break;
+                        return -1;
                     } 
                 }
 
@@ -230,6 +228,6 @@ public class ArrCharOps {
 
                 else ans = 0;
 
-                return ans;
+                return ans; 
             }
 }
