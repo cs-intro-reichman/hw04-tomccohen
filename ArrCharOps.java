@@ -197,11 +197,10 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
             public static int compareTo(String str1, String str2) {
-                //str1 = str1.toLowerCase();
-                //str2 = str2.toLowerCase();
+                if (str1 == null || str2 == null) return -2;
+
                 char[] arr1 = str1.toCharArray();
                 char[] arr2 = str2.toCharArray();
-                int ans = -2;
                 int i = 0; 
 
                 while (i < arr1.length && i < arr2.length)
@@ -222,12 +221,11 @@ public class ArrCharOps {
                     } 
                 }
 
-                if (arr1.length < arr2.length) ans = -1;
+                if (arr1.length < arr2.length) return -1;
 
-                else if (arr1.length > arr2.length) ans = 1;
+                else if (arr1.length > arr2.length) return 1;
 
-                else ans = 0;
+                else return 0;
 
-                return ans; 
             }
 }
