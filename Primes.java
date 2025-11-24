@@ -12,7 +12,7 @@ public class Primes {
                     count++;
                 }  
         }
-        System.out.println("there are " + count + " primes between 2 and " + n + " (" +  (int)(((double) count /  n) * 100) + "% are primes)");
+        System.out.println("There are " + count + " primes between 2 and " + n + " (" +  (int)(((double) count /  n) * 100) + "% are primes)");
     }
 
     public static boolean[] isPrime(int n) {
