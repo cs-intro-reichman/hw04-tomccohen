@@ -25,7 +25,7 @@ public class Primes {
             if (primeNumbers[i]) 
             {
                 int start = i;
-                for (int j = i; j < n; j += i)
+                for (int j = i; j <= n; j += i)
                 {
                     if (j != start) primeNumbers[j] = false;
                 }
