@@ -39,11 +39,13 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
+        if (str1 == null || str2 ==null) return false;
+        
         int bigger = str1.length();
         int smaller = str2.length();
 
+        if (smaller == 0) return true;
         if (bigger < smaller) return false;
-        if (str1 == null || str2 ==null) return false;
 
         boolean contains = false;
         int lastIndex = bigger - smaller  + 1;
