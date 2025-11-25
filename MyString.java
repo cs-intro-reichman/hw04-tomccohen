@@ -43,6 +43,7 @@ public class MyString {
         int smaller = str2.length();
 
         if (bigger < smaller) return false;
+        if (str1 == null || str2 ==null) return false;
 
         boolean contains = false;
         int lastIndex = bigger - smaller  + 1;
