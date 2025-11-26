@@ -47,7 +47,6 @@ public class KeywordsDetector {
          
                 }
                 if (contains) System.out.println(currentSentnce);
-                break;
             }     
             
         }
